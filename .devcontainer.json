@@ -1,21 +1,21 @@
 {
-  "name": "Entorno Pedidos en Linea (Node.js)",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "Entorno Tienda en Linea",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "20"
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21"
     }
   },
   "customizations": {
     "vscode": {
       "extensions": [
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "ms-azuretools.vscode-docker"
+        "vscjava.vscode-java-pack",
+        "ms-azuretools.vscode-docker",
+        "redhat.java"
       ]
     }
   },
-  "forwardPorts": [5432, 5672, 15672, 3000],
+  "forwardPorts": [5432, 8080, 5173],
   "remoteUser": "root"
 }
